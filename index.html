@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>🥖</title>
+    <link rel="stylesheet" href="assets/index.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/png" href="assets/bread.png">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1 class="translate">{{title}}</h1>
+    </div>
+    <nav class="lang">
+        <a href="?lang=fr">fr</a>
+        <a href="?lang=en">en</a>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+
+        <!--<h2 class="translate">{{ingredients}}</h2>-->
+        <h2 class="translate">{{ingredients}}</h2>
+        <div class="input-group">
+            <label for="flour" class="translate">{{flour}}</label>
+            <span class="unit weight"><input id="flour" type="number" value="500"></span>
+        </div>
+        <div class="input-group">
+            <label for="hydration" class="translate">{{hydration}}</label>
+            <span class="unit percent"><input id="hydration" type="number" value="70" min="60" max="90"></span>
+        </div>
+        <div class="input-group">
+            <label for="starter_hydration" class="translate">{{starter_hydration}}</label>
+            <span class="unit percent"><input id="starter_hydration" type="number" value="100" min="40" max="100"></span>
+        </div>
+
+        <h2 class="translate">{{to_add}}</h2>
+        <div class="input-group">
+            <label for="water" class="translate">{{water}}</label>
+            <span class="unit weight"><input id="water" type="number" value="" disabled></span>
+        </div>
+        <div class="input-group">
+            <label for="starter_weight"><span class="translate">{{starter}}</span></label>
+            <span class="unit weight"><input id="starter_weight" type="number" disabled></span>
+        </div>
+        <div class="input-group">
+            <label for="salt-min" class="translate">{{salt}}</label>
+            <div class="text-group">
+                min:&nbsp;<span class="unit weight"><strong id="salt-min"></strong></span>&nbsp;
+                max:&nbsp;<span class="unit weight"><strong id="salt-max"></strong></span>
+            </div>
+        </div>
+
+        <h2 class="translate">{{etc}}</h2>
+        <div class="input-group">
+            <label for="total_weight"><span class="translate">{{total_weight}}</span></label>
+            <span class="unit weight"><input id="total_weight" type="number" disabled></span>
+        </div>
+
+        <!--<h2 class="translate">{{time}}</h2>
+        <div class="input-group">
+            <label for="cold" class="translate">{{cold}}</label>
+            <input id="cold" type="checkbox">
+        </div>
+        <div class="input-group">
+            <label for="ambiant_temp" class="translate">{{ambiant_temp}}</label>
+            <span class="unit temp"><input id="ambiant_temp" type="number" value="30"></span>
+        </div>
+        <div class="input-group">
+            <label for="ready_at" class="translate">{{ready_at}}</label>
+            <span class="unit time"><input id="ready_at" type="time" value="20:00"></span>
+        </div>
+        <div class="input-group">
+            <label for="cooking_time" class="translate">{{cooking_time}}</label>
+            <span class="unit time"><input id="cooking_time" type="time" disabled></span>
+        </div>
+        <div class="input-group">
+            <label for="second_ferm" class="translate">{{second_ferm}}</label>
+            <span class="unit time"><input id="second_ferm" type="time" disabled></span>
+        </div>
+        <div class="input-group">
+            <label for="first_ferm" class="translate">{{first_ferm}}</label>
+            <span class="unit time"><input id="first_ferm" type="time" disabled></span>
+        </div>
+        <div class="input-group">
+            <label for="starter_feed_time" class="translate">{{starter_feed_time}}</label>
+            <span class="unit time"><input id="starter_feed_time" type="time" disabled></span>
+        </div>-->
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>July 2020</p>
+        <p>Élise Duverdier</p>
+        <p>MIT Licence</p>
+        <p><a href="about.html">About ➫</a></p>
+    </div>
+</footer>
+<script src="assets/lib.js" type="text/javascript"></script>
+<script src="assets/js/quantities.js" type="text/javascript"></script>
+<script src="assets/translator.js" type="text/javascript"></script>
+
+</body>
+</html>

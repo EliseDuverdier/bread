@@ -1,0 +1,158 @@
+:root {
+    --light:  #fefadcff;
+    --main-bg-color: #ffc412;
+    --main-color: #bc3e15;;
+    --accent: #e28413ff;
+}
+
+/* reset */
+div, p, input, label, body, html, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 1em;
+}
+body {background: var(--light);}
+
+input:focus {
+    outline: 0;
+}
+@font-face { font-family: Garamond; src: url('../../data/fontface/Garamond.otf'); font-weight: normal; font-style: normal; }
+@font-face { font-family: Garamond; src: url('../../data/fontface/GaramondB.otf'); font-weight: bold; font-style: normal; }
+@font-face { font-family: Garamond; src: url('../../data/fontface/GaramondI.otf'); font-weight: normal; font-style: italic; }
+@font-face { font-family: Garamond; src: url('../../data/fontface/GaramondBI.otf'); font-weight: bold; font-style: italic; }
+
+h1 {
+    margin: 10px auto;
+    text-align: center;
+    font: italic bold 36px 'Garamond';
+}
+
+h2 {
+    font: italic bold 24px 'Garamond';
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
+
+a {
+    color: var(--main-color);
+}
+
+body, input {
+    font: normal normal 16px 'Karrik', monospace;
+    color: var(--main-color);
+}
+
+
+/* layout */
+@media only screen and (max-width: 600px) {
+    /* mobile */
+    .container {
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* desktop */
+    .container {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    header, footer {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+
+main {
+    background: var(--main-bg-color);
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 25px;
+}
+
+footer {
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background: var(--main-bg-color);
+}
+
+
+/* style */
+
+label {
+    text-align: right;
+    align-self: center;
+}
+
+input {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid;
+    padding: 2px;
+    margin: 5px;
+    background: var(--main-bg-color);
+    -webkit-appearance: none;
+}
+
+.input-group {
+    display: grid;
+    grid-column-gap: 3px;
+    grid-template-columns: 1fr 2fr;
+}
+
+input:focus {
+    background: var(--accent);
+}
+
+input[disabled] {
+    border: 0 solid var(--main-color);
+    font-weight: bold;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+div.text-group {
+    padding: 2px;
+    margin: 5px;
+}
+
+span.unit {
+    display: inline-grid;
+    grid-template-columns: 1fr minmax(20px, auto);
+    align-items: center;
+}
+
+.unit.percent:after {
+    content: '%';
+}
+
+.unit.weight:after {
+    content: 'g';
+}
+
+.unit.time:after {
+    content: 'hh:mm';
+}
+
+.unit.temp:after {
+    content: '°C';
+}
